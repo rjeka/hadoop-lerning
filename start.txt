@@ -1,0 +1,9 @@
+NameNode
+for x in `cd /etc/init.d ; ls hadoop-hdfs-*` ; do sudo service $x start ; done
+sudo service hadoop-yarn-resourcemanager start
+sudo service hadoop-mapreduce-historyserver start
+
+
+Datanode and Secondarynamenode
+for x in `cd /etc/init.d ; ls hadoop-hdfs-*` ; do sudo service $x start ; done
+sudo service hadoop-yarn-nodemanager start
