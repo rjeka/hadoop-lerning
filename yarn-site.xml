@@ -23,10 +23,6 @@
 	<value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler</value>
 </property>
 <property>
-	<name>yarn.resourcemanager.scheduler.class</name>
-	<value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
-</property>
-<property>
 	<name>yarn.resourcemanager.hostname</name>
 	<value>ip-172-31-38-195.us-west-2.compute.internal</value>
 </property>
