@@ -1,0 +1,30 @@
+addprinc -randkey hdfs/ip-172-31-38-195.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey mapred/ip-172-31-38-195.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey yarn/ip-172-31-38-195.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey HTTP/ip-172-31-38-195.us-west-2.compute.internal@HADM03.LOC
+
+
+addprinc -randkey hdfs/ip-172-31-37-153.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey mapred/ip-172-31-37-153.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey yarn/ip-172-31-37-153.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey HTTP/ip-172-31-37-153.us-west-2.compute.internal@HADM03.LOC
+
+
+addprinc -randkey hdfs/ip-172-31-35-134.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey mapred/ip-172-31-35-134.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey yarn/ip-172-31-35-134.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey HTTP/ip-172-31-35-134.us-west-2.compute.internal@HADM03.LOC
+
+addprinc -randkey hdfs/ip-172-31-34-170.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey mapred/ip-172-31-34-170.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey yarn/ip-172-31-34-170.us-west-2.compute.internal@HADM03.LOC
+addprinc -randkey HTTP/ip-172-31-34-170.us-west-2.compute.internal@HADM03.LOC
+
+
+xst -norandkey -k hdfs.keytab hdfs/ip-172-31-38-195.us-west-2.compute.internal HTTP/ip-172-31-38-195.us-west-2.compute.internal
+xst -norandkey -k mapred.keytab mapred/ip-172-31-38-195.us-west-2.compute.internal HTTP/ip-172-31-38-195.us-west-2.compute.internal
+xst -norandkey -k yarn.keytab yarn/ip-172-31-38-195.us-west-2.compute.internal HTTP/ip-172-31-38-195.us-west-2.compute.internal
+
+xst -norandkey -k hdfs.keytab hdfs/ip-172-31-37-153.us-west-2.compute.internal HTTP/ip-172-31-37-153.us-west-2.compute.internal
+xst -norandkey -k mapred.keytab mapred/ip-172-31-37-153.us-west-2.compute.internal HTTP/ip-172-31-37-153.us-west-2.compute.internal
+xst -norandkey -k yarn.keytab yarn/ip-172-31-37-153.us-west-2.compute.internal HTTP/ip-172-31-37-153.us-west-2.compute.internal

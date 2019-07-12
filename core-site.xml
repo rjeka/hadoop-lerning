@@ -19,15 +19,51 @@
 
 <configuration>
 <property>
-	<name>fs.defaultFS</name> <value>hdfs://ip-172-31-38-195.us-west-2.compute.internal:8020</value>
-</property> <property>
-        <name>io.compression.codecs</name>
-        <value>org.apache.hadoop.io.compress.DefaultCodec,org.apache.hadoop.io.compress.GzipCodec,org.apache.hadoop.io.compress.BZip2Codec</value>
-</property> <property>
-        <name>hadoop.proxyuser.mapred.groups</name>
-        <value>*</value> </property>
+	<name>hadoop.security.group.mapping</name>
+	<value>org.apache.hadoop.security.LdapGroupsMapping</value>
+</property>
+<property>
+	<name>hadoop.security.group.mapping.ldap.url</name>
+	<value>ldap://172.31.42.188</value>
+</property>
+<property>
+	<name>hadoop.security.group.mapping.ldap.bind.user</name>
+	<value>hadoopadmin@HADM2018.LOC</value>
+</property>
+<property>
+	<name>hadoop.security.group.mapping.ldap.bind.password</name>
+	<value>P@ssw0rd</value>
+</property>
+<property>
+	<name>hadoop.security.group.mapping.ldap.base</name>
+	<value>dc=HADM2018,dc=LOC</value>
+</property>
+<property>
+	<name>hadoop.security.group.mapping.ldap.search.filter.user</name>
+	<value>(&amp;(objectClass=user)(sAMAccountName={0}))</value>
+</property>
+<property>
+	<name>hadoop.security.group.mapping.ldap.search.filter.group</name>
+	<value>(objectClass=group)</value>
+</property>
+<property>
+	<name>hadoop.security.group.mapping.ldap.search.attr.group.name</name>
+	<value>cn</value>
+</property>
+<property>
+	<name>fs.defaultFS</name>
+	<value>hdfs://ip-172-31-38-195.us-west-2.compute.internal:8020</value>
+</property>
+<property>
+	<name>io.compression.codecs</name>
+	<value>org.apache.hadoop.io.compress.DefaultCodec,org.apache.hadoop.io.compress.GzipCodec,org.apache.hadoop.io.compress.BZip2Codec</value>
+</property>
+<property>
+	<name>hadoop.proxyuser.mapred.groups</name>
+	<value>*</value>
+</property>
 <property>
 	<name>hadoop.proxyuser.mapred.hosts</name>
-        <value>*</value>
+	<value>*</value>
 </property>
 </configuration>
